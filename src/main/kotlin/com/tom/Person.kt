@@ -3,18 +3,31 @@ package com.tom
 fun main() {
 //    println("Hello World")
 //    Human().hello()
-        val h = Human()
-        //h.hello()
-    // 這裡用var跟val(value)都可以，val代表指定後不能再改變
-        val age = 19
+        val h = Human(weight = 66.5f, height = 1.7f)
+        println(h.bmi())
+        val score = 88
+        println(score>80)
+        val c : Char = 'A';
+        println(c.toInt() > 80)
+        //?Java???Kt??????????
+        /*val age = 19
         val age2 : Int = 19
-    //Kotlin的"自動推斷變數型態"，所以不指定資料型態
+
         var weight : Float = 66.5f
-    //Kotlin跟Java一樣小數點預設都是 Double型態
+
         var name : String
-        name = "Andrei"
+        name = "Andrei"*/
 }
-class Human {
+class Human ( var weight : Float, var height : Float, var name : String = "") {
+    init{
+        println("test $weight") //$????????$weight????
+    }
+//    constructor(name: String, weight: Float, height: Float) : this(weight, height)
+    //???constructor?"?????" ??????????val?var
+    fun bmi() : Float {
+        val bmi = weight/(height*height)
+        return bmi
+    }
     fun hello(){
         println("Hello Kotlin")
     }
