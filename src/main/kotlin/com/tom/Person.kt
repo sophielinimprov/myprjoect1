@@ -3,13 +3,19 @@ package com.tom
 fun main() {
 //    println("Hello World")
 //    Human().hello()
+        var s : String? = "abcdef"
+//        s = null
+        println(s?.length)
+        println(s?.get(3))
+        println(s?.substring(3))
+
         val h = Human(weight = 66.5f, height = 1.7f)
         println(h.bmi())
         val score = 88
         println(score>80)
         val c : Char = 'A';
         println(c.toInt() > 80)
-        //?Java???Kt??????????
+
         /*val age = 19
         val age2 : Int = 19
 

@@ -3,13 +3,25 @@ package com.tom;
 public class Hello {
     public static void main(String[] args) {
 //        System.out.println("Hello World");
-        Person p = new Person();
+        String s = "abcdef";
+        System.out.println(s.charAt(3));
+        System.out.println(s.substring(0,3));
+
+
+
+
+        Person p = new Person("Andrei", 66.5f, 1.7f);
         p.hello();
-        int age = 19;
+//        p.weight = 66.5f;
+//        p.height = 1.7f;
+
+        System.out.println(p.bmi());
+        int score = 88;
+        System.out.println(score<80 || score>90);
+        char c = 'A';
+        System.out.println(c > 'a');
+        /*int age = 19;
         Integer age2 = 19;
-        //用"參照物件型態"的Integer類型，代表將它視為一個物件，就可以使用java裡的功能
-        //如age2.byteValue()
-        //這種又稱作 Wrapper Class 包裝型態
         char c = '我';
         Character c2 = 'A';
         byte b = 120;
@@ -17,7 +29,8 @@ public class Hello {
         float height = 1.7f;
         boolean adult = true;
         boolean enroll = false;
-        String name = "Andrei";
-        //Reference data type參照資料型態，首字大寫，如String, Integer等
+        String name = "Andrei";*/
+
     }
 }
+
